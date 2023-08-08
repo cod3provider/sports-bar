@@ -1,0 +1,43 @@
+
+
+.hero {
+    min-width: 375px;
+    margin: 0 auto;
+    background-image: url('../../assets/images/backgroundHero.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;  
+}
+
+.container {
+margin: 0 auto;
+max-width: 767px;
+padding: 0 30px 24px;
+
+}
+.heroBoxText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+      font-family: 'Lexend';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    margin-bottom: 23px;
+    color: #F3E5CD;
+}
+.text {
+font-family: 'Khmer';
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+ margin: 0;
+ margin-bottom: 55px;
+line-height: 1.57; /* 157.143% */
+color: #F3E5CD;
+}
+
