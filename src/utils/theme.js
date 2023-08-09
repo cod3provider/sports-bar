@@ -13,6 +13,14 @@ export const theme = {
 			media: '(min-width: 768px) and (max-width: 1279.98px)',
 			width: '768px',
 		},
+    fromTablet: {
+      media: '(min-width: 768px)',
+      width: '768px',
+    },
+    toDesktop: {
+      media: '(max-width: 1279.98px)',
+      width: '768px',
+    },
 		desktop: {
 			media: '(min-width: 1280px)',
 			width: '1280px',
