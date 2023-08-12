@@ -1,9 +1,22 @@
 import Logo from "../Logo/index.js";
 
-import {BurgerButton, BurgerIcon, LinkNav, MobileMenu, NavList, StyledNav} from "./Nav.styled.js";
+import {
+	BurgerButton,
+	BurgerIcon,
+	LinkNav,
+	MobileLinkNav,
+	MobileMenu,
+	MobileNavList,
+	NavList,
+	StyledNav
+} from "./Nav.styled.js";
 import {useEffect, useRef, useState} from "react";
+import {useMedia} from "react-use";
 
 const Nav = () => {
+	const mobileWindow = useMedia('(max-width: 767.98px)');
+	const fromTabletWindow = useMedia('(min-width: 768px');
+
 	const [isOpenMenu, setIsOpenMenu] = useState(false);
 	const mobileMenuRef = useRef(null);
 
@@ -46,35 +59,65 @@ const Nav = () => {
 	return (
 		<StyledNav>
 			<Logo/>
-			<BurgerButton onClick={handleMobileMenuToggle}>
-				<BurgerIcon/>
-			</BurgerButton>
+
+			{mobileWindow && (
+				<BurgerButton onClick={handleMobileMenuToggle}>
+					<BurgerIcon/>
+				</BurgerButton>
+			)}
+
+			{fromTabletWindow && (<NavList>
+				<li>
+					<LinkNav href="">Home</LinkNav>
+				</li>
+
+				<li>
+					<LinkNav href="">Menu</LinkNav>
+				</li>
+
+				<li>
+					<LinkNav href="">Events</LinkNav>
+				</li>
+
+				<li>
+					<LinkNav href="">About</LinkNav>
+				</li>
+
+				<li>
+					<LinkNav href="">Gallery</LinkNav>
+				</li>
+
+				<li>
+					<LinkNav href="">Find us</LinkNav>
+				</li>
+			</NavList>)}
+
 			<MobileMenu className={isOpenMenu ? 'open' : ''} ref={mobileMenuRef}>
-				<NavList>
+				<MobileNavList>
 					<li>
-						<LinkNav href="">Home</LinkNav>
+						<MobileLinkNav href="">Home</MobileLinkNav>
 					</li>
 
 					<li>
-						<LinkNav href="">Menu</LinkNav>
+						<MobileLinkNav href="">Menu</MobileLinkNav>
 					</li>
 
 					<li>
-						<LinkNav href="">Events</LinkNav>
+						<MobileLinkNav href="">Events</MobileLinkNav>
 					</li>
 
 					<li>
-						<LinkNav href="">About</LinkNav>
+						<MobileLinkNav href="">About</MobileLinkNav>
 					</li>
 
 					<li>
-						<LinkNav href="">Gallery</LinkNav>
+						<MobileLinkNav href="">Gallery</MobileLinkNav>
 					</li>
 
 					<li>
-						<LinkNav href="">Find us</LinkNav>
+						<MobileLinkNav href="">Find us</MobileLinkNav>
 					</li>
-				</NavList>
+				</MobileNavList>
 			</MobileMenu>
 		</StyledNav>
 	)

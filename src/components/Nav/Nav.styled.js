@@ -44,17 +44,38 @@ export const MobileMenu = styled.div`
   }
 `
 
-export const NavList = styled.ul`
+export const MobileNavList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 20px;
 `
 
+export const NavList = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  
+  @media (960px <= width) {
+    margin-right: 50px;
+  }
+`
+
 export const LinkNav = styled.a`
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  transition: color 350ms linear;
+  
+  &:hover {
+    color: #E2DBBE;
+  }
+`
+
+export const MobileLinkNav = styled.a`
   color: #504C4C;
   font-family: 'Varela Round', sans-serif;
   font-size: 28px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 32px; /* 114.286% */
+  line-height: 1.14;
 `
