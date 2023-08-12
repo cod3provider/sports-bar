@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import {theme} from "../../utils/theme.js";
 
 export const Container = styled.div`
@@ -6,7 +6,7 @@ export const Container = styled.div`
   padding-right: 16px;
   padding-left: 16px;
 
-  @media (${theme.breakpoints.tablet}) {
+  @media (width <= ${theme.breakpoints.tablet}) {
     max-width: 480px;
   }
 
