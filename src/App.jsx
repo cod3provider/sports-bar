@@ -1,21 +1,17 @@
-
-import Hero from './components/Hero/Hero'
-import Footer from "./components/Footer/index.js";
-import {Container} from "./components/Container/Container.styled.js";
 import './App.css'
+import Header from "./layout/Header/index.js";
+import Main from "./layout/Main/index.js";
+import Footer from "./layout/Footer/index.js";
 
 function App() {
 
-  return (
-    <>
-
-
-      <Container>
-	 <Hero/>
-      </Container>
-	    <Footer /> 
-    </>
-  )
+	return (
+		<>
+			<Header/>
+			<Main />
+			<Footer/>
+		</>
+	)
 }
 
 export default App
