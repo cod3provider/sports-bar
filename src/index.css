@@ -1,8 +1,4 @@
-@font-face {
-  font-family: 'Varela Round';
-  src: url();
-}
-
+/* 
 body {
   margin: 0;
   display: flex;
@@ -32,4 +28,46 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+@import 'node_modules/modern-normalize/modern-normalize.css';
 
+body {
+    font-family: 'Varela Round', sans-serif;
+    /*  margin: 0;*/
+/*  display: flex;*/
+/*  place-items: center;*/
+/*  min-width: 320px;*/
+/*  min-height: 100vh;*/
+
+/* 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    color: currentColor;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+} */
