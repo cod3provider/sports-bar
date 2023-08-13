@@ -1,18 +1,17 @@
 import './App.css'
-import Footer from "./components/Footer/index.js";
-import {Container} from "./components/Container/Container.styled.js";
+import Header from "./layout/Header/index.js";
+import Main from "./layout/Main/index.js";
+import Footer from "./layout/Footer/index.js";
 
 function App() {
 
-  return (
-    <>
-      <Container>
-	    <h1>Test</h1>
-
-      </Container>
-	    <Footer />
-    </>
-  )
+	return (
+		<>
+			<Header/>
+			<Main />
+			<Footer/>
+		</>
+	)
 }
 
 export default App
