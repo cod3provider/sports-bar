@@ -1,12 +1,14 @@
 import './App.css'
-import Footer from "./layout/Footer/index.js";
 import Header from "./layout/Header/index.js";
+import Main from "./layout/Main/index.js";
+import Footer from "./layout/Footer/index.js";
 
 function App() {
 
 	return (
 		<>
 			<Header/>
+			<Main />
 			<Footer/>
 		</>
 	)
