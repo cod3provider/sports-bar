@@ -7,9 +7,7 @@ const Header = () => {
 	return (
 		<HeaderStyled>
 			<Container>
-				<Nav>
-					<p>Ok</p>
-				</Nav>
+				<Nav />
 			</Container>
 		</HeaderStyled>
 	)

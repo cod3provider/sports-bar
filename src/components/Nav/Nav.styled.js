@@ -1,6 +1,7 @@
+import {Link} from "react-router-dom";
 import styled, {css} from "styled-components/macro";
-import Button from "../Button/Button.jsx";
 import { TbMenu2 } from "react-icons/tb";
+import Button from "../Button/Button.jsx";
 // import {Link} from "react-router-dom";
 
 export const StyledNav = styled.nav`
@@ -61,7 +62,7 @@ export const NavList = styled.ul`
   }
 `
 
-export const LinkNav = styled.a`
+export const LinkNav = styled(Link)`
   font-size: 20px;
   font-weight: 400;
   line-height: 1.2;
@@ -72,7 +73,7 @@ export const LinkNav = styled.a`
   }
 `
 
-export const MobileLinkNav = styled.a`
+export const MobileLinkNav = styled(Link)`
   color: #504C4C;
   font-family: 'Varela Round', sans-serif;
   font-size: 28px;
