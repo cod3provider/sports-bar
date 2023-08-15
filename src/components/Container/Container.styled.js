@@ -1,5 +1,5 @@
-import styled from "styled-components/macro";
-import {theme} from "../../utils/theme.js";
+import styled from 'styled-components/macro';
+import { theme } from '../../utils/theme.js';
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -11,15 +11,15 @@ export const Container = styled.div`
   }
 
   @media (${theme.breakpoints.fromTablet}) {
-  padding-right: 40px;
-  padding-left: 40px;
-}
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 
-  @media (${theme.breakpoints.fromTablet} {
-  max-width: 960px;
-}
+  @media (${theme.breakpoints.fromTablet}) {
+    max-width: 960px;
+  }
 
   @media (${theme.breakpoints.desktop}) {
     max-width: 1280px;
   }
-`
+`;
