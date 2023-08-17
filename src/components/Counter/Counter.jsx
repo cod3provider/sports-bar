@@ -1,4 +1,10 @@
 import { useState } from 'react';
+import {
+  CounterBox,
+  CounterBtnMinus,
+  CounterBtnPlus,
+  CounterRes,
+} from './Counter.styled';
 
 export const Counter = () => {
   const [number, setNumber] = useState(0);
@@ -10,14 +16,14 @@ export const Counter = () => {
   };
 
   return (
-    <>
-      <button type="button" onClick={handleDecrement}>
+    <CounterBox>
+      <CounterBtnMinus type="button" onClick={handleDecrement}>
         -
-      </button>
-      <p>{number}</p>
-      <button type="button" onClick={handleIncrement}>
+      </CounterBtnMinus>
+      <CounterRes>{number}</CounterRes>
+      <CounterBtnPlus type="button" onClick={handleIncrement}>
         +
-      </button>
-    </>
+      </CounterBtnPlus>
+    </CounterBox>
   );
 };

@@ -1,6 +1,15 @@
 import styled from 'styled-components/macro';
 
+export const CateegoryBox = styled.ul`
+  margin: 0 auto;
+`;
+
+export const CategoryItem = styled.li`
+  padding: 24px 0;
+`;
+
 export const MenuImg = styled.img`
-  width: 340px;
-  height: 340px;
+  margin: 0 auto;
+  width: 343px;
+  height: 252px;
 `;

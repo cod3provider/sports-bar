@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { Container } from '../Container/Container.styled';
-import { MenuImg } from './Menu.styled';
+import { CateegoryBox, CategoryItem, MenuImg } from './Menu.styled';
 import Burger from '../../assets/images/menu-section-burger.jpg';
 import Pizza from '../../assets/images/menu-section-pizza.jpg';
 import Salads from '../../assets/images/menu-section-salads.jpg';
@@ -253,17 +253,17 @@ export const Menu = () => {
 
   return (
     <Container>
-      <ul>
+      <CateegoryBox>
         {categories.map(category => (
-          <li key={category}>
+          <CategoryItem key={category}>
             <MenuImg alt={category} src={`${imgName[category]}`} />
             <MenuList
               category={category}
               menuByCategory={menuByCategory(category)}
             />
-          </li>
+          </CategoryItem>
         ))}
-      </ul>
+      </CateegoryBox>
     </Container>
   );
 };
