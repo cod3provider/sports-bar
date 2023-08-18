@@ -21,10 +21,12 @@ const Hero = () => {
                 <TitleHero>Come on in and have a Great Time!</TitleHero>
                 <Text>Book your seat, enjoy with 25% off pre-booking.</Text>
               </HeroBoxText>
+
               <ButtonHero>
                 Book a table <StyleSvgHero />
               </ButtonHero>
             </div>
+
             <div>
               <Table />
             </div>
