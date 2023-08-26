@@ -11,9 +11,11 @@ export const CounterBtnPlus = styled(Button)`
   border: 1px solid #e0dfdf;
   background: #ffdba0;
 
+  padding: 0 10px;
+
   color: #4d4b4b;
   font-family: Varela Round;
-  font-size: 15px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -33,8 +35,9 @@ export const CounterRes = styled.p`
 
   color: #4d4b4b;
   font-family: Varela Round;
-  font-size: 15px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  padding: 0 10px;
 `;

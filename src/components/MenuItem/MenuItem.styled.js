@@ -3,7 +3,7 @@ import Button from '../Button/Button';
 
 export const MenuLi = styled.li`
   width: 343px;
-  height: 120px;
+  /* height: 120px; */
   padding: 0px 10px;
   border-radius: 10px;
   background: #f3e5cd;
@@ -28,6 +28,9 @@ export const ItemImage = styled.img`
 export const ItemBox = styled.div`
   margin: 7px 0 7px 10px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const TitleBox = styled.div`
@@ -63,4 +66,24 @@ export const DescriptionItem = styled.p`
   line-height: normal;
 `;
 
-export const CounterBtnPlus = styled(Button)``;
+export const AcceptBtn = styled(Button)`
+  color: #f3e5cd;
+  font-family: Varela Round;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  /* width: 84px; */
+  height: 32px;
+  padding: 10px 15px;
+
+  border-radius: 7px;
+  border: 1px solid #e0dfdf;
+  background: #da5a30;
+`;
+
+export const OrderBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
