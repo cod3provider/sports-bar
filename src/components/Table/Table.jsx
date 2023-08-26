@@ -1,29 +1,30 @@
-import { TableStyle, TableBody } from './Table.styled';
+import {TableStyle, TableBody, TableHead, Th, Tr, TableWrap, TableHeadTr} from './Table.styled';
 
 export const Table = () => {
   return (
-    <>
+    <TableWrap>
       <TableStyle>
-        <thead>
-          <tr>
-            <th>Opening hours:</th>
-          </tr>
-        </thead>
+        <TableHead>
+          <TableHeadTr>
+            <th colspan="2">Opening hours:</th>
+          </TableHeadTr>
+        </TableHead>
+
         <TableBody>
-          <tr>
-            <th>Mon - Thu</th>
+          <Tr>
+            <Th>Mon - Thu</Th>
             <td>16:00 - 00:00</td>
-          </tr>
-          <tr>
-            <th>Fri</th>
+          </Tr>
+          <Tr>
+            <Th>Fri</Th>
             <td>16:00 until the last client</td>
-          </tr>
-          <tr>
-            <th>Sat - Sun</th>
+          </Tr>
+          <Tr>
+            <Th>Sat - Sun</Th>
             <td>10:00 until</td>
-          </tr>
+          </Tr>
         </TableBody>
       </TableStyle>
-    </>
+    </TableWrap>
   );
 };
