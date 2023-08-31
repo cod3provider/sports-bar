@@ -1,24 +1,41 @@
 import PropTypes from 'prop-types';
 import TemplateImg from '../../assets/images/template-img.jpg';
 import { Counter } from '../Counter/Counter';
+import {
+  AcceptBtn,
+  DescriptionItem,
+  ItemBox,
+  ItemImage,
+  ItemTitle,
+  MenuLi,
+  OrderBox,
+  Price,
+  TitleBox,
+} from './MenuItem.styled';
 
 export const MenuItem = ({
   menu: { description, name, price, img = TemplateImg },
 }) => {
   return (
-    <li>
-      <img src={img} />
-      <div>
-        <h3>{name}</h3>
-        <p>
-          <span>&#36;</span>
-          {price}
-        </p>
-        <p>{description}</p>
-        <Counter />
-        <button>Add to cart</button>
-      </div>
-    </li>
+    <MenuLi>
+      <ItemImage src={img} />
+      <ItemBox>
+        <div>
+          <TitleBox>
+            <ItemTitle>{name}</ItemTitle>
+            <Price>
+              <span>&#36;</span>
+              {price}
+            </Price>
+          </TitleBox>
+          <DescriptionItem>{description}</DescriptionItem>
+        </div>
+        <OrderBox>
+          <Counter />
+          <AcceptBtn>Add to cart</AcceptBtn>
+        </OrderBox>
+      </ItemBox>
+    </MenuLi>
   );
 };
 
