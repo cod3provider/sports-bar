@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import { theme } from '../../utils/theme.js';
+import { theme } from '../../../utils/theme.js';
 
 export const Container = styled.div`
   margin: 0 auto;

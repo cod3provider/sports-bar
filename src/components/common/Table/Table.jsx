@@ -1,4 +1,4 @@
-import {TableStyle, TableBody, TableHead, Th, Tr, TableWrap, TableHeadTr} from './Table.styled';
+import {TableStyle, TableBody, TableHead, Th, Tr, TableWrap, TableHeadTr} from './Table.styled.js';
 
 export const Table = () => {
   return (

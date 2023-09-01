@@ -1,6 +1,6 @@
-import { Container } from '../Container/Container.styled';
+import { Container } from '../common/Container/Container.styled';
 
-import { Table } from '../Table/Table';
+import { Table } from '../common/Table/Table';
 import {
   HeroStyled,
   HeroBoxText,
