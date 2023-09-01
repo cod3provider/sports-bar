@@ -6,7 +6,7 @@ export const Table = () => {
       <TableStyle>
         <TableHead>
           <TableHeadTr>
-            <th colspan="2">Opening hours:</th>
+            <th colSpan="2">Opening hours:</th>
           </TableHeadTr>
         </TableHead>
 
