@@ -3,6 +3,8 @@ import Button from '../Button/Button';
 
 export const CounterBox = styled.div`
   display: flex;
+  min-height: 33px;
+  align-items: center;
 `;
 
 export const CounterBtnPlus = styled(Button)`

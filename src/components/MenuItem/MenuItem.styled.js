@@ -3,7 +3,6 @@ import Button from '../Button/Button';
 
 export const MenuLi = styled.li`
   width: 343px;
-  /* height: 120px; */
   padding: 0px 10px;
   border-radius: 10px;
   background: #f3e5cd;
@@ -11,12 +10,6 @@ export const MenuLi = styled.li`
   display: flex;
   padding: 10px;
   margin: 8px auto;
-  /* justify-content: space-between; */
-  /* align-items: center;
-  align-content: center; */
-  /* row-gap: 15px; */
-  /* flex-shrink: 0; */
-  /* flex-wrap: wrap; */
 `;
 
 export const ItemImage = styled.img`

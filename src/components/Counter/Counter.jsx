@@ -5,10 +5,15 @@ import {
   CounterBtnPlus,
   CounterRes,
 } from './Counter.styled';
+import { useDispatch } from 'react-redux';
+import { counterInc } from '../../redux/action';
 
-export const Counter = () => {
-  const [number, setNumber] = useState(0);
-  const handleIncrement = () => setNumber(number + 1);
+export const Counter = ({ quantity }) => {
+  const [number, setNumber] = useState(quantity);
+
+  const dispatch = useDispatch();
+
+  const handleIncrement = () => dispatch(counterInc(number, id));
   const handleDecrement = () => {
     if (number > 0) {
       setNumber(number - 1);
