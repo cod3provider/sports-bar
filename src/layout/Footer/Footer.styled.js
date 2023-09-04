@@ -33,7 +33,7 @@ export const FooterText = styled.p`
   font-family: 'Varela', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1;
+  line-height: normal;
   color: #7C7777;
   text-align: center;
 `

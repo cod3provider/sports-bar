@@ -4,18 +4,21 @@ import Main from './layout/Main/index.js';
 import Footer from './layout/Footer/index.js';
 import {Menu} from './components/Menu/Menu';
 import Hero from "./components/Hero/Hero.jsx";
+// import FindUs from "./components/FindUs/index.js";
 
 function App() {
-	return (
-		<>
-			<Header/>
+  return (
+    <>
+
+	    <Header/>
 			<Main>
-				<Hero/>
-				<Menu/>
-			</Main>
+				<Hero />
+      <Menu />
+      </Main>
 			<Footer/>
-		</>
-	);
+
+    </>
+  );
 }
 
 export default App;
