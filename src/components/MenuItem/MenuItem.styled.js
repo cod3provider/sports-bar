@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import Button from '../Button/Button';
+import Button from '../common/Button/Button';
 
 export const MenuLi = styled.li`
   width: 343px;

@@ -4,8 +4,8 @@ import {
 	FooterTextAddress,
 	MobileLogoWrap, FooterContainer
 } from "./Footer.styled.js";
-import Logo from "../../components/Logo/index.js";
-import SubscribeForm from "../../components/SubscribeForm/index.js";
+import Logo from "../../components/common/Logo/index.js";
+import SubscribeForm from "../../components/common/SubscribeForm/index.js";
 import {useMedia} from "react-use";
 import {FooterListWrap} from "./FooterSocialList/FooterSocialList.styled.js";
 import FooterSocialList from "./FooterSocialList/index.js";

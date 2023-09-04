@@ -1,4 +1,4 @@
-import Logo from "../Logo/index.js";
+import Logo from "../common/Logo/index.js";
 
 import {
 	BurgerButton,

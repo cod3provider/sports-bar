@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import Button from "../Button/Button";
+import Button from "../common/Button/Button";
 import { LiaConciergeBellSolid } from 'react-icons/lia';
 import bgImageMobile from '../../assets/images/backgroundHero.png';
 

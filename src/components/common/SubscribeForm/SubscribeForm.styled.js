@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 import Button from "../Button/Button.jsx";
-import {FooterText} from "../../layout/Footer/Footer.styled.js";
+import {FooterText} from "../../../layout/Footer/Footer.styled.js";
 
 export const StyledSubscribeForm = styled.form`
   display: flex;

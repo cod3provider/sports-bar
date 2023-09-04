@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
-import Button from "../../components/Button/Button.jsx";
-import {Container} from "../../components/Container/Container.styled.js";
+import Button from "../../components/common/Button/Button.jsx";
+import {Container} from "../../components/common/Container/Container.styled.js";
 
 export const FooterContainer = styled(Container)`
   padding: 24px;
