@@ -14,6 +14,7 @@ import {
 } from './MenuItem.styled';
 
 export const MenuItem = ({
+  menu,
   menu: { description, name, price, img = TemplateImg },
 }) => {
   return (
@@ -31,7 +32,7 @@ export const MenuItem = ({
           <DescriptionItem>{description}</DescriptionItem>
         </div>
         <OrderBox>
-          <Counter />
+          <Counter obj={menu} pages={'menu'} />
           <AcceptBtn>Add to cart</AcceptBtn>
         </OrderBox>
       </ItemBox>

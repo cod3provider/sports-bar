@@ -1,6 +1,6 @@
 import { OrderList } from '../../components/OrderList/OrderList';
 import { useSelector } from 'react-redux';
-import { getOrder } from '../../redux/selctors';
+import { getOrder } from '../../redux/selectors';
 
 export const OrderPages = () => {
   const order = useSelector(getOrder);

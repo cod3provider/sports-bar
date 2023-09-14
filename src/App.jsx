@@ -12,8 +12,10 @@ function App() {
       <Header />
       <Main>
         {/* <Hero /> */}
+        {/* <div style={'display:flex;'}> */}
         <OrderPages />
-        {/* <Menu /> */}
+        <Menu />
+        {/* </div> */}
       </Main>
       {/*	<Footer/>*/}
     </>

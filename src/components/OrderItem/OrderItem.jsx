@@ -10,22 +10,27 @@ import {
   OrderLi,
 } from './OrderItem.styled';
 export const OrderItem = ({
+  orderDish,
   orderDish: { id, img = TemplateImg, name, price, quantity },
 }) => {
   return (
-    <OrderLi>
-      <OrderImg src={img} />
-      <DishDescrBox>
-        <OrderDishTitle> {name}</OrderDishTitle>
+    <>
+      {quantity > 0 && (
+        <OrderLi>
+          <OrderImg src={img} />
+          <DishDescrBox>
+            <OrderDishTitle> {name}</OrderDishTitle>
 
-        <OrderContainer>
-          <DishPrice>
-            <span>&#36;</span>
-            {price}
-          </DishPrice>
-          <Counter quantity={quantity} id={id} />
-        </OrderContainer>
-      </DishDescrBox>
-    </OrderLi>
+            <OrderContainer>
+              <DishPrice>
+                <span>&#36;</span>
+                {price}
+              </DishPrice>
+              <Counter obj={orderDish} pages={'order'} />
+            </OrderContainer>
+          </DishDescrBox>
+        </OrderLi>
+      )}
+    </>
   );
 };
