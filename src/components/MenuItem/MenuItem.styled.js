@@ -78,5 +78,6 @@ export const AcceptBtn = styled(Button)`
 
 export const OrderBox = styled.div`
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
 `;

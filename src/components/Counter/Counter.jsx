@@ -8,17 +8,10 @@ import {
 import { useDispatch } from 'react-redux';
 import { counterDec, counterInc } from '../../redux/action';
 
-export const Counter = ({ obj, pages }) => {
+export const Counter = ({ obj }) => {
   const dispatch = useDispatch();
 
   const handleIncrement = () => {
-    switch (pages) {
-      case 'menu':
-        break;
-
-      default:
-        break;
-    }
     dispatch(counterInc(obj));
   };
   const handleDecrement = () => {

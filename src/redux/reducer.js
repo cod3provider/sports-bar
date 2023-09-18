@@ -1,16 +1,4 @@
 const initialState = {
-  order: [
-    {
-      id: '3',
-      categories: 'burger',
-      favorite: 'true',
-      name: 'Impossible Jerk',
-      price: '7.99',
-      quantity: 1,
-      description:
-        'Two  beef patties, American cheese, pickles, and onions, topped with jerk fries and jerk mayo.',
-    },
-  ],
   menu: [
     {
       id: '1',
@@ -269,46 +257,23 @@ const initialState = {
   table: 1,
 };
 
-export const rootReducer = (state = initialState, action) => {
-  switch (action.type) {
+export const rootReducer = (state = initialState, { type, payload }) => {
+  switch (type) {
     case 'counter/plus':
-      const findPlusObj = state.menu.find(
-        dish => dish.id === action.payload.id
-      );
+      const findPlusObj = state.menu.find(dish => dish.id === payload.id);
       const idxPlusObj = state.menu.indexOf(findPlusObj);
       const newPlusState = [...state.menu];
-      newPlusState.splice(idxPlusObj, 1, action.payload);
-      const orderPlusState = [...state.order];
-      const findPlusOrder = state.order.find(
-        dish => dish.id === action.payload.id
-      );
-      if (findPlusOrder === undefined) {
-        orderPlusState.push(action.payload);
-      } else {
-        const idxPlusOrder = state.order.indexOf(findPlusOrder);
-
-        orderPlusState.splice(idxPlusOrder, 1, action.payload);
-        console.log(idxPlusOrder);
-      }
-      return { ...state, menu: [...newPlusState], order: [...orderPlusState] };
+      newPlusState.splice(idxPlusObj, 1, payload);
+      return { ...state, menu: [...newPlusState] };
 
     case 'counter/minus':
-      const findMinusObj = state.order.find(
-        dish => dish.id === action.payload.id
-      );
-      const idxMinusObj = state.order.indexOf(findMinusObj);
-      const newMinusState = [...state.order];
-      newMinusState.splice(idxMinusObj, 1, action.payload);
-      const findMinusMenu = state.menu.find(
-        dish => dish.id === action.payload.id
-      );
-      const idxMinusMenu = state.menu.indexOf(findMinusObj);
+      const findMinusMenu = state.menu.find(dish => dish.id === payload.id);
+      const idxMinusMenu = state.menu.indexOf(findMinusMenu);
       const newMinusMenuState = [...state.menu];
-      newMinusMenuState.splice(idxMinusMenu, 1, action.payload);
+      newMinusMenuState.splice(idxMinusMenu, 1, payload);
 
       return {
         ...state,
-        order: [...newMinusState],
         menu: [...newMinusMenuState],
       };
 
