@@ -276,7 +276,16 @@ export const rootReducer = (state = initialState, { type, payload }) => {
         ...state,
         menu: [...newMinusMenuState],
       };
+    case 'order/delete':
+      const findDelObj = state.menu.find(dish => dish.id === payload.id);
+      const idxDelObj = state.menu.indexOf(findDelObj);
+      const newState = [...state.menu];
+      newState.splice(idxDelObj, 1, payload);
 
+      return {
+        ...state,
+        menu: [...newState],
+      };
     default:
       return state;
   }

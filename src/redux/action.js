@@ -17,3 +17,13 @@ export const counterDec = payload => {
     },
   };
 };
+
+export const delOrder = payload => {
+  return {
+    type: 'order/delete',
+    payload: {
+      ...payload,
+      quantity: 0,
+    },
+  };
+};
