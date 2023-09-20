@@ -13,7 +13,7 @@ import {
   TitleBox,
 } from './MenuItem.styled';
 import { useDispatch } from 'react-redux';
-import { counterInc } from '../../redux/action';
+import { counterInc } from '../../redux/menu/menu-action';
 
 export const MenuItem = ({
   menu,

@@ -6,7 +6,7 @@ import {
   CounterRes,
 } from './Counter.styled';
 import { useDispatch } from 'react-redux';
-import { counterDec, counterInc } from '../../redux/action';
+import { counterDec, counterInc } from '../../redux/menu/menu-action';
 
 export const Counter = ({ obj }) => {
   const dispatch = useDispatch();

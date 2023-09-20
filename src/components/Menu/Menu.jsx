@@ -5,7 +5,7 @@ import Pizza from '../../assets/images/menu-section-pizza.jpg';
 import Salads from '../../assets/images/menu-section-salads.jpg';
 import { MenuList } from '../MenuList/MenuList';
 import { useSelector } from 'react-redux';
-import { getMenu } from '../../redux/selectors';
+import { getMenu } from '../../redux/menu/menu-selectors';
 // import Bar from '../../assets/images/menu-section-bar.jpg';
 
 export const Menu = () => {

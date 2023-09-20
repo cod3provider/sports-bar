@@ -12,7 +12,7 @@ import {
   TrashBtn,
   TrashIcon,
 } from './OrderItem.styled';
-import { delOrder } from '../../redux/action';
+import { delOrder } from '../../redux/menu/menu-action';
 export const OrderItem = ({
   orderDish,
   orderDish: { id, img = TemplateImg, name, price, quantity },
