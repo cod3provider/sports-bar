@@ -1,7 +1,7 @@
 import {Link, NavLink} from "react-router-dom";
 import styled, {css} from "styled-components/macro";
 import { TbMenu2 } from "react-icons/tb";
-import Button from "../Button/Button.jsx";
+import Button from "../common/Button/Button.jsx";
 // import {Link} from "react-router-dom";
 
 export const StyledNav = styled.nav`

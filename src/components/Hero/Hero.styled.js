@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import Button from "../Button/Button";
+import Button from "../common/Button/Button";
 import { LiaConciergeBellSolid } from 'react-icons/lia';
 import bgImageMobile from '../../assets/images/backgroundHero.png';
 
@@ -17,7 +17,7 @@ export const HeroStyled = styled.section`
 export const ButtonHero = styled(Button)`
 display: flex;
 color: #F3E5CD;
-font-family: Varela;
+font-family: 'Varela', sans-serif;
 font-size: 24px;
 font-style: normal;
 font-weight: 400;
@@ -54,14 +54,13 @@ export const HeroBoxText = styled.div`
 
 
 export const TitleHero = styled.h1`
-  font-family: 'Lexend';
+  font-family: 'Lexend', sans-serif;
   align-self: flex-start;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: 0;
-  margin-bottom: 23px;
+  margin: 0 0 23px;
   color: #F3E5CD;
 `
 

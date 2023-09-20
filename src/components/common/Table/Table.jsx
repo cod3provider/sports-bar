@@ -1,4 +1,4 @@
-import {TableStyle, TableBody, TableHead, Th, Tr, TableWrap, TableHeadTr} from './Table.styled';
+import {TableStyle, TableBody, TableHead, Th, Tr, TableWrap, TableHeadTr} from './Table.styled.js';
 
 export const Table = () => {
   return (
@@ -6,7 +6,7 @@ export const Table = () => {
       <TableStyle>
         <TableHead>
           <TableHeadTr>
-            <th colspan="2">Opening hours:</th>
+            <th colSpan="2">Opening hours:</th>
           </TableHeadTr>
         </TableHead>
 
