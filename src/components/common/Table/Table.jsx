@@ -1,4 +1,4 @@
-import {TableStyle, TableBody, TableHead, Th, Tr, TableWrap, TableHeadTr} from './Table.styled.js';
+import { TableStyle, TableBody, TableHead, Th, Tr, TableWrap, TableHeadTr, Td } from './Table.styled.js';
 
 export const Table = () => {
   return (
@@ -13,15 +13,15 @@ export const Table = () => {
         <TableBody>
           <Tr>
             <Th>Mon - Thu</Th>
-            <td>16:00 - 00:00</td>
+            <Td>16:00 - 00:00</Td>
           </Tr>
           <Tr>
             <Th>Fri</Th>
-            <td>16:00 until the last client</td>
+            <Td>16:00 until the last client</Td>
           </Tr>
           <Tr>
             <Th>Sat - Sun</Th>
-            <td>10:00 until</td>
+            <Td>10:00 until</Td>
           </Tr>
         </TableBody>
       </TableStyle>
