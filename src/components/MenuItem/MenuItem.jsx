@@ -12,10 +12,15 @@ import {
   Price,
   TitleBox,
 } from './MenuItem.styled';
+import { useDispatch } from 'react-redux';
+import { counterInc } from '../../redux/menu/menu-action';
 
 export const MenuItem = ({
-  menu: { description, name, price, img = TemplateImg },
+  menu,
+  menu: { description, name, price, img = TemplateImg, quantity },
 }) => {
+  const dispatch = useDispatch();
+  const handleInc = () => dispatch(counterInc(menu));
   return (
     <MenuLi>
       <ItemImage src={img} />
@@ -31,8 +36,13 @@ export const MenuItem = ({
           <DescriptionItem>{description}</DescriptionItem>
         </div>
         <OrderBox>
-          <Counter />
-          <AcceptBtn>Add to cart</AcceptBtn>
+          {quantity > 0 ? (
+            <Counter obj={menu} pages={'menu'} />
+          ) : (
+            <AcceptBtn type="button" onClick={handleInc}>
+              Add to cart
+            </AcceptBtn>
+          )}
         </OrderBox>
       </ItemBox>
     </MenuLi>

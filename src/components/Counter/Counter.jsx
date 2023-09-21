@@ -5,14 +5,26 @@ import {
   CounterBtnPlus,
   CounterRes,
 } from './Counter.styled';
+import { useDispatch } from 'react-redux';
+import { counterDec, counterInc } from '../../redux/menu/menu-action';
 
-export const Counter = () => {
-  const [number, setNumber] = useState(0);
-  const handleIncrement = () => setNumber(number + 1);
+export const Counter = ({ obj }) => {
+  const dispatch = useDispatch();
+
+  const handleIncrement = () => {
+    dispatch(counterInc(obj));
+  };
   const handleDecrement = () => {
-    if (number > 0) {
-      setNumber(number - 1);
+    if (obj.quantity === 0) {
+      return;
     }
+    if (obj.quantity === 1) {
+      confirm('are you sure');
+      dispatch(counterDec(obj));
+      return;
+    }
+
+    dispatch(counterDec(obj));
   };
 
   return (
@@ -20,7 +32,7 @@ export const Counter = () => {
       <CounterBtnMinus type="button" onClick={handleDecrement}>
         -
       </CounterBtnMinus>
-      <CounterRes>{number}</CounterRes>
+      <CounterRes>{obj.quantity}</CounterRes>
       <CounterBtnPlus type="button" onClick={handleIncrement}>
         +
       </CounterBtnPlus>
