@@ -1,4 +1,4 @@
-import { Container } from '../Container/Container.styled';
+import { Container } from '../common/Container/Container.styled';
 import { CateegoryBox, CategoryItem, MenuImg } from './Menu.styled';
 import Burger from '../../assets/images/menu-section-burger.jpg';
 import Pizza from '../../assets/images/menu-section-pizza.jpg';

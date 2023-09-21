@@ -5,19 +5,20 @@ import {FooterText} from "../../../layout/Footer/Footer.styled.js";
 export const StyledSubscribeForm = styled.form`
   display: flex;
   gap: 8px;
+  width: 320px;
   
   @media (width < 1280px) {
     flex-direction: column;
   }
 `
 
-export const SubscribeInputWrap = styled.div`
-  
+export const FormWrap = styled.div`
+  width: 320px;
 `
 
 export const SubscribeInput = styled.input`
   padding: 12px 12px;
-  width: 320px;
+  width: 100%;
   
   font-family: 'Varela', sans-serif;
   font-size: 14px;
