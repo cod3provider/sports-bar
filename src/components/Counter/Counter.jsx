@@ -6,25 +6,30 @@ import {
   CounterRes,
 } from './Counter.styled';
 import { useDispatch } from 'react-redux';
-import { counterDec, counterInc } from '../../redux/menu/menu-action';
+import { counterDecrement, counterIncrement } from '../../redux/menu/menu-action';
 
 export const Counter = ({ obj }) => {
   const dispatch = useDispatch();
 
   const handleIncrement = () => {
-    dispatch(counterInc(obj));
+    dispatch(counterIncrement(obj));
   };
   const handleDecrement = () => {
-    if (obj.quantity === 0) {
-      return;
-    }
     if (obj.quantity === 1) {
-      confirm('are you sure');
-      dispatch(counterDec(obj));
-      return;
+      const isConfirmDelete = confirm('are you sure');
+
+	    if (isConfirmDelete === true)
+	    {
+		    dispatch(counterDecrement(obj));
+		    return;
+	    }
+	    else
+	    {
+		    return null;
+	    }
     }
 
-    dispatch(counterDec(obj));
+    dispatch(counterDecrement(obj));
   };
 
   return (
