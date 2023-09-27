@@ -1,29 +1,30 @@
-export const counterInc = payload => {
-  return {
-    type: 'counter/plus',
-    payload: {
-      ...payload,
-      quantity: payload.quantity + 1,
-    },
-  };
-};
+import {createAction} from "@reduxjs/toolkit";
 
-export const counterDec = payload => {
-  return {
-    type: 'counter/minus',
-    payload: {
-      ...payload,
-      quantity: payload.quantity - 1,
-    },
-  };
-};
 
-export const delOrder = payload => {
+
+export const counterIncrement = createAction('counter/plus', data => {
   return {
-    type: 'order/delete',
     payload: {
-      ...payload,
-      quantity: 0,
+      ...data,
+      quantity: data.quantity + 1,
     },
   };
-};
+});
+
+export const counterDecrement = createAction('counter/minus', data => {
+  return {
+    payload: {
+      ...data,
+      quantity: data.quantity - 1,
+    },
+  };
+});
+
+export const deleteOrder = createAction('order/delete', data => {
+  return {
+    payload: {
+      ...data,
+      quantity: 0
+    },
+  };
+});
