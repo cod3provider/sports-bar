@@ -13,14 +13,14 @@ import {
   TitleBox,
 } from './MenuItem.styled';
 import { useDispatch } from 'react-redux';
-import { counterInc } from '../../redux/menu/menu-action';
+import { counterIncrement } from '../../redux/menu/menu-action';
 
 export const MenuItem = ({
   menu,
   menu: { description, name, price, img = TemplateImg, quantity },
 }) => {
   const dispatch = useDispatch();
-  const handleInc = () => dispatch(counterInc(menu));
+  const handleInc = () => dispatch(counterIncrement(menu));
   return (
     <MenuLi>
       <ItemImage src={img} />

@@ -14,8 +14,8 @@ function App() {
       <Main>
         {/* <Hero /> */}
         {/* <div style={'display:flex;'}> */}
-        {/* <OrderPages />
-        <Menu /> */}
+        <OrderPages />
+        <Menu />
         {/* </div> */}
       </Main>
 
@@ -25,3 +25,4 @@ function App() {
 }
 
 export default App;
+67

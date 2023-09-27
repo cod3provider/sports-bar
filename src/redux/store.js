@@ -1,6 +1,8 @@
-import { createStore } from 'redux';
-import { devToolsEnhancer } from '@redux-devtools/extension';
-import rootReducer from './root-reducer';
+import {configureStore} from "@reduxjs/toolkit";
+// import { createStore } from 'redux';
+// import { devToolsEnhancer } from '@redux-devtools/extension';
+// import rootReducer from './root-reducer';
+import menuReducer from './menu/menu-reducer';
 
 // const reducer = store => {
 //   console.log(store);
@@ -33,6 +35,11 @@ import rootReducer from './root-reducer';
 //   table: 1,
 // };
 
-const enhancer = devToolsEnhancer();
+// const enhancer = devToolsEnhancer();
 
-export const store = createStore(rootReducer, enhancer);
+export const store = configureStore({
+  reducer: {
+    menu: menuReducer,
+  },
+});
+

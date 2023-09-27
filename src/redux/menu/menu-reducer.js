@@ -1,3 +1,7 @@
+import {createReducer} from "@reduxjs/toolkit";
+import {counterDecrement, counterIncrement, deleteOrder} from "./menu-action.js";
+
+
 const initialState = [
   {
     id: '1',
@@ -254,33 +258,59 @@ const initialState = [
   },
 ];
 
-export const menuReducer = (state = initialState, { type, payload }) => {
-  switch (type) {
-    case 'counter/plus':
-      const findPlusObj = state.find(dish => dish.id === payload.id);
-      const idxPlusObj = state.indexOf(findPlusObj);
-      const newPlusState = [...state];
-      newPlusState.splice(idxPlusObj, 1, payload);
-      return [...newPlusState];
+const menuReducer = createReducer(initialState, {
+  [counterIncrement]: (state, {payload}) => {
+    const findPlusObj = state.find(dish => dish.id === payload.id);
+    const idxPlusObj = state.indexOf(findPlusObj);
+    const newPlusState = [...state];
+    newPlusState.splice(idxPlusObj, 1, payload);
+    return [...newPlusState];
+  },
+  [counterDecrement]: (state, {payload}) => {
+    const findMinusMenu = state.find(dish => dish.id === payload.id);
+    const idxMinusMenu = state.indexOf(findMinusMenu);
+    const newMinusMenuState = [...state];
+    newMinusMenuState.splice(idxMinusMenu, 1, payload);
 
-    case 'counter/minus':
-      const findMinusMenu = state.find(dish => dish.id === payload.id);
-      const idxMinusMenu = state.indexOf(findMinusMenu);
-      const newMinusMenuState = [...state];
-      newMinusMenuState.splice(idxMinusMenu, 1, payload);
+    return [...newMinusMenuState];
+  },
+  [deleteOrder]: (state, { payload }) => {
+    const findDelObj = state.find(dish => dish.id === payload.id);
+    const idxDelObj = state.indexOf(findDelObj);
+    const newState = [...state];
+    newState.splice(idxDelObj, 1, payload);
 
-      return [...newMinusMenuState];
-
-    case 'order/delete':
-      const findDelObj = state.find(dish => dish.id === payload.id);
-      const idxDelObj = state.indexOf(findDelObj);
-      const newState = [...state];
-      newState.splice(idxDelObj, 1, payload);
-
-      return [...newState];
-    default:
-      return state;
+    return [...newState];
   }
-};
+})
+
+// export const menuReducer = (state = initialState, {type, payload}) => {
+//   switch (type) {
+//     // case 'counter/plus':
+//     //   const findPlusObj = state.find(dish => dish.id === payload.id);
+//     //   const idxPlusObj = state.indexOf(findPlusObj);
+//     //   const newPlusState = [...state];
+//     //   newPlusState.splice(idxPlusObj, 1, payload);
+//     //   return [...newPlusState];
+//
+//     case 'counter/minus':
+//     // const findMinusMenu = state.find(dish => dish.id === payload.id);
+//     // const idxMinusMenu = state.indexOf(findMinusMenu);
+//     // const newMinusMenuState = [...state];
+//     // newMinusMenuState.splice(idxMinusMenu, 1, payload);
+//     //
+//     // return [...newMinusMenuState];
+//
+//     // case 'order/delete':
+//     //   const findDelObj = state.find(dish => dish.id === payload.id);
+//     //   const idxDelObj = state.indexOf(findDelObj);
+//     //   const newState = [...state];
+//     //   newState.splice(idxDelObj, 1, payload);
+//     //
+//     //   return [...newState];
+//     default:
+//       return state;
+//   }
+// };
 
 export default menuReducer;
