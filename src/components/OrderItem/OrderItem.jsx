@@ -12,7 +12,7 @@ import {
   TrashBtn,
   TrashIcon,
 } from './OrderItem.styled';
-import {counterDecrement, deleteOrder} from '../../redux/menu/menu-action';
+import { counterDecrement, deleteOrder } from '../../redux/menu/menu-action';
 export const OrderItem = ({
   orderDish,
   orderDish: { id, img = TemplateImg, name, price, quantity },
@@ -20,17 +20,14 @@ export const OrderItem = ({
   const dispatch = useDispatch();
 
   const handleDecr = () => {
-	  const isConfirmDelete = confirm('are you sure');
+    const isConfirmDelete = confirm('are you sure');
 
-	  if (isConfirmDelete === true)
-	  {
-		  dispatch(deleteOrder(orderDish));
-		  return;
-	  }
-	  else
-	  {
-		  return null;
-	  }
+    if (isConfirmDelete === true) {
+      dispatch(deleteOrder(orderDish));
+      return;
+    } else {
+      return null;
+    }
   };
 
   return (
