@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { TableMainText } from '../../OrderTable/OrderTable.styled';
 
 export const TableRow = ({

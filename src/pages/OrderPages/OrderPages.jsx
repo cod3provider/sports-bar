@@ -2,7 +2,12 @@ import { OrderList } from '../../components/OrderList/OrderList';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMenu } from '../../redux/menu/menu-selectors';
 import { OrderTable } from '../../components/OrderTable/OrderTable';
-import { PlaceOrder } from './OrderPages.styled';
+import {
+  OrderText,
+  OrderTitle,
+  OrderWraper,
+  PlaceOrder,
+} from './OrderPages.styled';
 import { placeOrder } from '../../redux/menu/menu-action';
 
 export const OrderPages = () => {
@@ -14,8 +19,8 @@ export const OrderPages = () => {
   const handlePlaceOrder = () => dispatch(placeOrder());
 
   return (
-    <>
-      <h2>Your order</h2>
+    <OrderWraper>
+      <OrderTitle>Your order</OrderTitle>
       {isOrder ? (
         <>
           <OrderList order={order} />
@@ -25,8 +30,8 @@ export const OrderPages = () => {
           </PlaceOrder>
         </>
       ) : (
-        <p>you have not ordered anything</p>
+        <OrderText>you have not ordered anything</OrderText>
       )}
-    </>
+    </OrderWraper>
   );
 };
