@@ -1,5 +1,7 @@
 import styled from 'styled-components/macro';
 import SubscribeForm from '../common/SubscribeForm/index.js';
+import { IoLocationOutline } from 'react-icons/io5';
+import { Section } from '../common/Section/Section.styled.js';
 // import { TableWrap } from '../common/Table/Table.styled.js';
 
 export const TextAddress = styled.p`
@@ -10,7 +12,12 @@ export const TextAddress = styled.p`
   font-weight: 400;
   line-height: 1.31;
   
+  @media (768px <= width) {
+    width: 204px;
+  }
+  
   @media (1440px <= width) {
+    width: 380px;
     font-size: 26px;
   }
 `
@@ -26,7 +33,7 @@ export const FindUsContentWrap = styled.div`
 
 export const SubscribeWrap = styled.div`
   width: 278px;
-
+  
 `
 export const FindUsSubscribe = styled(SubscribeForm)`
   width: 278px;
@@ -36,17 +43,31 @@ export const InfoWrap = styled.div`
   display: flex;
   justify-content: center;
   gap: 90px;
-  margin-top: 24px;
+  margin-top: 36px;
   
   @media (1440px <= width) {
     flex-direction: column;
+    gap: 30px;
     width: 500px;
   }
 `
 
-// export const FindUsTable = styled(TableWrap)`
-//
-//   @media (1440px <= width) {
-//     width: 500px;
-//   }
-// `
+export const FindUsIconTextWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  
+  //@media (width < 1440px) {
+  //  gap: 28px;
+  //}
+`
+
+export const FindUsIconLocation = styled(IoLocationOutline)`
+  width: 32px;
+  height: 32px;
+  color: #504C4C;
+  
+  @media (1440px <= width) {
+    width: 57px;
+    height: 57px;
+  }
+`
