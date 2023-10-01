@@ -26,6 +26,7 @@ export const InfoWrap = styled.div`
   display: flex;
   justify-content: center;
   gap: 90px;
+  margin-top: 24px;
   
   @media (1280px <= width) {
     flex-direction: column;
