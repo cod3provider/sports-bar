@@ -1,8 +1,6 @@
 import styled from 'styled-components/macro';
 import SubscribeForm from '../common/SubscribeForm/index.js';
 import { IoLocationOutline } from 'react-icons/io5';
-import { Section } from '../common/Section/Section.styled.js';
-// import { TableWrap } from '../common/Table/Table.styled.js';
 
 export const TextAddress = styled.p`
   color: #504C4C;
@@ -33,7 +31,6 @@ export const FindUsContentWrap = styled.div`
 
 export const SubscribeWrap = styled.div`
   width: 278px;
-  
 `
 export const FindUsSubscribe = styled(SubscribeForm)`
   width: 278px;
@@ -55,10 +52,6 @@ export const InfoWrap = styled.div`
 export const FindUsIconTextWrap = styled.div`
   display: flex;
   justify-content: space-between;
-  
-  //@media (width < 1440px) {
-  //  gap: 28px;
-  //}
 `
 
 export const FindUsIconLocation = styled(IoLocationOutline)`
