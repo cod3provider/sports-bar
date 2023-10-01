@@ -5,9 +5,11 @@ import {FooterText} from "../../../layout/Footer/Footer.styled.js";
 export const StyledSubscribeForm = styled.form`
   display: flex;
   gap: 8px;
-  width: 320px;
+  width: 500px;
+  align-items: flex-end;
   
-  @media (width < 1280px) {
+  @media (width < 1440px) {
+  width: 320px;
     flex-direction: column;
   }
 `
@@ -27,11 +29,19 @@ export const SubscribeInput = styled.input`
   color: #7C7777;
   border: 1px solid #5B5858;
   border-radius: 10px;
+  
+  @media (1440px <= width) {
+    width: 320px;
+  }
 `
 
-export const FooterFormTitle = styled(FooterText)`
+export const SubcsribeFormTitle = styled(FooterText)`
   margin-bottom: 8px;
   color: #504C4C;
+  
+  @media (768px <= width) {
+    text-align: start;
+  }
 `
 
 export const SubscribeButton = styled(Button)`
@@ -47,4 +57,10 @@ export const SubscribeButton = styled(Button)`
   border: none;
   background: #FFE380;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  @media (1440px <= width) {
+    width: 172px;
+    height: 58px;
+    font-size: 20px;
+  }
 `

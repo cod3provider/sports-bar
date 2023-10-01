@@ -1,5 +1,5 @@
 import {
-	FooterFormTitle,
+	SubcsribeFormTitle,
 	FormWrap,
 	StyledSubscribeForm,
 	SubscribeButton,
@@ -11,9 +11,9 @@ const SubscribeForm = () => {
 		<div>
 			<StyledSubscribeForm>
 				<FormWrap>
-					<FooterFormTitle>
+					<SubcsribeFormTitle>
 						Subscribe to our newsletter.
-					</FooterFormTitle>
+					</SubcsribeFormTitle>
 
 					<SubscribeInput placeholder="Enter your mail" type="text"/>
 				</FormWrap>
