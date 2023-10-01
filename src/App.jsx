@@ -16,7 +16,7 @@ function App() {
     <>
       <Header />
       <Main>
-        {/* <Hero /> */}
+         <Hero />
         {/* <div style={'display:flex;'}> */}
         {/* <OrderPages />
         <Menu /> */}
