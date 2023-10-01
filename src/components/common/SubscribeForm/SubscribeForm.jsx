@@ -8,7 +8,6 @@ import {
 
 const SubscribeForm = () => {
 	return (
-		<div>
 			<StyledSubscribeForm>
 				<FormWrap>
 					<SubcsribeFormTitle>
@@ -22,7 +21,6 @@ const SubscribeForm = () => {
 					Subscribe
 				</SubscribeButton>
 			</StyledSubscribeForm>
-		</div>
 	)
 }
 
