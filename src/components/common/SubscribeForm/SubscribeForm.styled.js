@@ -8,14 +8,28 @@ export const StyledSubscribeForm = styled.form`
   width: 500px;
   align-items: flex-end;
   
-  @media (width < 1440px) {
-  width: 320px;
+  @media (width < 768px) {
+    width: 320px;
     flex-direction: column;
+  }
+  
+  @media (768px <= width < 1440px) {
+    flex-direction: column;
+    width: 278px;
+    margin-top: 12px;
   }
 `
 
 export const FormWrap = styled.div`
   width: 320px;
+  
+  @media (768px <= width) {
+    width: 278px;
+  }
+  
+  @media (1440px <= width) {
+    width: 500px;
+  }
 `
 
 export const SubscribeInput = styled.input`
