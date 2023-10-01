@@ -6,5 +6,12 @@ export const StyledGoogleMap = styled.div`
   height: 407px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.30);
+  box-shadow: 7px 7px 15px 0 rgba(0, 0, 0, 0.30);
+
+  @media (1440px <= width) {
+    margin: 0;
+    width: 700px;
+    height: 470px;
+  }
 `;
+
