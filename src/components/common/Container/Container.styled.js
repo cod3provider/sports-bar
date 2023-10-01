@@ -17,6 +17,6 @@ export const Container = styled.div`
   }
 
   @media (${theme.breakpoints.desktop.media}) {
-    max-width: 1280px;
+    max-width: 1360px;
   }
 `;
