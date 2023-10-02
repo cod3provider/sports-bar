@@ -1,27 +1,27 @@
-import {TableStyle, TableBody, TableHead, Th, Tr, TableWrap, TableHeadTr} from './Table.styled.js';
+import { TableStyle, TableBody, TableHead, Th, Tr, TableWrap, TableHeadTr, Td } from './Table.styled.js';
 
-export const Table = () => {
+export const Table = ({ tableWrapStyles, THeadStyles, thStyles, tdStyles }) => {
   return (
-    <TableWrap>
+    <TableWrap style={tableWrapStyles}>
       <TableStyle>
         <TableHead>
           <TableHeadTr>
-            <th colSpan="2">Opening hours:</th>
+            <th style={THeadStyles} colSpan="2">Opening hours:</th>
           </TableHeadTr>
         </TableHead>
 
         <TableBody>
           <Tr>
-            <Th>Mon - Thu</Th>
-            <td>16:00 - 00:00</td>
+            <Th style={thStyles}>Mon - Thu</Th>
+            <Td style={tdStyles}>16:00 - 00:00</Td>
           </Tr>
           <Tr>
-            <Th>Fri</Th>
-            <td>16:00 until the last client</td>
+            <Th style={thStyles}>Fri</Th>
+            <Td style={tdStyles}>16:00 until the last client</Td>
           </Tr>
           <Tr>
-            <Th>Sat - Sun</Th>
-            <td>10:00 until</td>
+            <Th style={thStyles}>Sat - Sun</Th>
+            <Td style={tdStyles}>10:00 until</Td>
           </Tr>
         </TableBody>
       </TableStyle>
