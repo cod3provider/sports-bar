@@ -25,6 +25,7 @@ export const TableHead = styled.thead`
 `
 
 export const TableHeadTr = styled.tr`
+  height: 33px;
   border-top: none;
 `
 
@@ -36,7 +37,11 @@ export const Tr = styled.tr`
   border-top: 1px solid #4D4848;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), rgba(143, 137, 137, 0.25);
 `
-
+export const Td = styled.td`
+  width: 200px;
+  height: 45px;
+  text-transform: lowercase;
+`
 
 export const TableBody = styled.tbody`
 font-size: 16px;

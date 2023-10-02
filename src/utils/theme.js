@@ -22,8 +22,8 @@ export const theme = {
       width: '768px',
     },
 		desktop: {
-			media: '(min-width: 1280px)',
-			width: '1280px',
+			media: '(min-width: 1440px)',
+			width: '1440px',
 		},
 
     fonts: {
