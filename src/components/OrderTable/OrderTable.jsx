@@ -28,10 +28,10 @@ export const OrderTable = ({ order }) => {
           </td>
           <td></td>
           <td>
-            <TableAcentText>
+            <TableFooterText>
               <span>&#36;</span>
               {total.toFixed(2)}
-            </TableAcentText>
+            </TableFooterText>
           </td>
         </tr>
       </tfoot>

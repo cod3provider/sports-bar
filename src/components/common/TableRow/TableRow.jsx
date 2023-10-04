@@ -1,4 +1,7 @@
-import { TableMainText } from '../../OrderTable/OrderTable.styled';
+import {
+  TableAcentText,
+  TableMainText,
+} from '../../OrderTable/OrderTable.styled';
 
 export const TableRow = ({
   orderItem: { name, price, quantity },
@@ -9,7 +12,7 @@ export const TableRow = ({
 
   return (
     <tr>
-      <td>{idx === 0 && <TableMainText>Your order</TableMainText>}</td>
+      <td>{idx === 0 && <TableAcentText>Your order</TableAcentText>}</td>
       <td>
         <TableMainText>{name}</TableMainText>
       </td>

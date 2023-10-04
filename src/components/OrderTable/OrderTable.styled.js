@@ -21,9 +21,10 @@ export const TableMainText = styled.p`
   line-height: normal;
 `;
 
-export const TableFooterText = styled(TableMainText)`
-  margin-top: 36px;
-`;
-export const TableAcentText = styled(TableFooterText)`
+export const TableAcentText = styled(TableMainText)`
   color: #333030;
+`;
+
+export const TableFooterText = styled(TableAcentText)`
+  margin-top: 36px;
 `;
