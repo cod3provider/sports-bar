@@ -66,6 +66,7 @@ export const LinkNav = styled(NavLink)`
   font-size: 20px;
   font-weight: 400;
   line-height: 1.2;
+  color: #F7F2F2;
   transition: color 350ms linear;
   
   &:hover {

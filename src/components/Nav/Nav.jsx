@@ -13,7 +13,7 @@ import {
 import {useEffect, useRef, useState} from "react";
 import {useMedia} from "react-use";
 
-const Nav = () => {
+const  Nav = () => {
 	const mobileWindow = useMedia('(max-width: 767.98px)');
 	const fromTabletWindow = useMedia('(min-width: 768px');
 
