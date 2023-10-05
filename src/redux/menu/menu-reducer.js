@@ -3,6 +3,7 @@ import {
   counterDecrement,
   counterIncrement,
   deleteOrder,
+  placeOrder,
 } from './menu-action.js';
 
 const initialState = [
@@ -284,6 +285,17 @@ const menuReducer = createReducer(initialState, {
     newState.splice(idxDelObj, 1, payload);
 
     return [...newState];
+  },
+  [placeOrder]: state => {
+    const orderState = [];
+    for (let item of state) {
+      item = {
+        ...item,
+        quantity: 0,
+      };
+      orderState.push(item);
+    }
+    return [...orderState];
   },
 });
 
