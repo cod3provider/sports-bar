@@ -1,6 +1,11 @@
-import {createReducer} from "@reduxjs/toolkit";
-import {counterDecrement, counterIncrement, deleteOrder} from "./menu-action.js";
-
+import { current } from 'immer';
+import { createReducer } from '@reduxjs/toolkit';
+import {
+  counterDecrement,
+  counterIncrement,
+  deleteOrder,
+  placeOrder,
+} from './menu-action.js';
 
 const initialState = [
   {
@@ -259,14 +264,14 @@ const initialState = [
 ];
 
 const menuReducer = createReducer(initialState, {
-  [counterIncrement]: (state, {payload}) => {
+  [counterIncrement]: (state, { payload }) => {
     const findPlusObj = state.find(dish => dish.id === payload.id);
     const idxPlusObj = state.indexOf(findPlusObj);
     const newPlusState = [...state];
     newPlusState.splice(idxPlusObj, 1, payload);
     return [...newPlusState];
   },
-  [counterDecrement]: (state, {payload}) => {
+  [counterDecrement]: (state, { payload }) => {
     const findMinusMenu = state.find(dish => dish.id === payload.id);
     const idxMinusMenu = state.indexOf(findMinusMenu);
     const newMinusMenuState = [...state];
@@ -281,8 +286,20 @@ const menuReducer = createReducer(initialState, {
     newState.splice(idxDelObj, 1, payload);
 
     return [...newState];
-  }
-})
+  },
+
+  [placeOrder]: state => {
+    const orderState = [];
+    for (let item of state) {
+      item = {
+        ...item,
+        quantity: 0,
+      };
+      orderState.push(item);
+    }
+    return [...orderState];
+  },
+});
 
 // export const menuReducer = (state = initialState, {type, payload}) => {
 //   switch (type) {
