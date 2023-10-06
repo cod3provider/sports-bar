@@ -1,4 +1,3 @@
-import { current } from 'immer';
 import { createReducer } from '@reduxjs/toolkit';
 import {
   counterDecrement,
@@ -169,7 +168,7 @@ const initialState = [
   {
     id: '17',
     categories: 'pizza',
-    favorite: 'false',
+    favorite: 'true',
     name: 'Angry Nonna',
     price: '17.99',
     quantity: 0,
@@ -179,7 +178,7 @@ const initialState = [
   {
     id: '18',
     categories: 'pizza',
-    favorite: 'false',
+    favorite: 'true',
     name: 'Pepperoni',
     price: '7.99',
     quantity: 0,
@@ -188,7 +187,7 @@ const initialState = [
   {
     id: '19',
     categories: 'pizza',
-    favorite: 'false',
+    favorite: 'true',
     name: 'Pizza Upside Down',
     price: '13.99',
     quantity: 0,
@@ -287,7 +286,6 @@ const menuReducer = createReducer(initialState, {
 
     return [...newState];
   },
-
   [placeOrder]: state => {
     const orderState = [];
     for (let item of state) {
