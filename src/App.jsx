@@ -4,7 +4,8 @@ import Main from './layout/Main/index.js';
 import Footer from './layout/Footer/index.js';
 import { OrderPages } from './pages/OrderPages/OrderPages';
 import {Menu} from './components/Menu/Menu';
-import Hero from "./components/Hero/Hero.jsx";
+import  {Gallary}  from './components/Gallary/Gallary.jsx';
+// import Hero from "./components/Hero/Hero.jsx";
 // import FindUs from "./components/FindUs/index.js";
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Menu />
         {/* </div> */}
       </Main>
-
+        <Gallary/>
 			<Footer/>
     </>
   );
