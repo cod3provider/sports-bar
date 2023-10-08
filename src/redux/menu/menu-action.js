@@ -1,6 +1,4 @@
-import {createAction} from "@reduxjs/toolkit";
-
-
+import { createAction } from '@reduxjs/toolkit';
 
 export const counterIncrement = createAction('counter/plus', data => {
   return {
@@ -24,7 +22,9 @@ export const deleteOrder = createAction('order/delete', data => {
   return {
     payload: {
       ...data,
-      quantity: 0
+      quantity: 0,
     },
   };
 });
+
+export const placeOrder = createAction('order/place');

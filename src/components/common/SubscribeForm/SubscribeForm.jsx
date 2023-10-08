@@ -1,22 +1,26 @@
-import {FooterFormTitle, StyledSubscribeForm, SubscribeButton, SubscribeInput} from "./SubscribeForm.styled.js";
+import {
+	SubcsribeFormTitle,
+	FormWrap,
+	StyledSubscribeForm,
+	SubscribeButton,
+	SubscribeInput,
+} from './SubscribeForm.styled.js';
 
 const SubscribeForm = () => {
 	return (
-		<div>
 			<StyledSubscribeForm>
-				<div>
-					<FooterFormTitle>
+				<FormWrap>
+					<SubcsribeFormTitle>
 						Subscribe to our newsletter.
-					</FooterFormTitle>
+					</SubcsribeFormTitle>
 
 					<SubscribeInput placeholder="Enter your mail" type="text"/>
-				</div>
+				</FormWrap>
 
 				<SubscribeButton>
 					Subscribe
 				</SubscribeButton>
 			</StyledSubscribeForm>
-		</div>
 	)
 }
 
