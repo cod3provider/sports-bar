@@ -62,15 +62,15 @@ export const GalleryImage = styled.img`
     ),
     url(<path-to-image>), lightgray -0.74px -39.526px / 100% 153.994% no-repeat;
 `;
-export const ButtonPrew = styled.button`
-width: 48px;
-fill: #FFDBA0;
-`;
+// export const ButtonPrew = styled.button`
+// width: 48px;
+// fill: #FFDBA0;
+// `;
 
-export const ButtonNext = styled.button`
-width: 48px;
-fill: #FFDBA0;
-`;
+// export const ButtonNext = styled.button`
+// width: 48px;
+// fill: #FFDBA0;
+// `;
 
 export const SliderWrapperDot = styled.div`
 width: 100%;
