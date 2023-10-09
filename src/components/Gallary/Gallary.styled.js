@@ -49,10 +49,9 @@ width: 173px;
 
 export const GalleryImage = styled.img`
   display: block;
-  /* width: 100%; */
+  width: 100%;
   width: 173px;
   height: 260px;
-  /* max-width: 100%; */
   object-fit: cover;
   border-radius: 5px;
   background: linear-gradient(
