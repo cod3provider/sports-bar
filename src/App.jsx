@@ -16,7 +16,6 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="orderPage" element={<OrderPages />} />
           <Route path="menu" element={<Menu />} />
-
           <Route path="*" element={<HomePage />} />
         </Route>
       </Routes>
