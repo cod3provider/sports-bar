@@ -33,7 +33,7 @@ export const Menu = ({ favorite }) => {
         {categories.map(
           category =>
             menuByCategory(category).length > 0 && (
-              <CategoryItem key={category}>
+              <CategoryItem key={category} id={category}>
                 <MenuImg alt={category} src={`${imgName[category]}`} />
                 <MenuList
                   category={category}

@@ -13,3 +13,7 @@ export const HeaderSection = styled.section`
 export const HeaderStyled = styled.header`
   padding: 10px 0;
 `;
+
+export const HeaderBox = styled.div`
+  margin-top: 60px;
+`;
