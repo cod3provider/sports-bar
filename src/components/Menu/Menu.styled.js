@@ -6,6 +6,7 @@ export const CateegoryBox = styled.ul`
 
 export const CategoryItem = styled.li`
   padding: 24px 0;
+  border-top-style: dashed;
 `;
 
 export const MenuImg = styled.img`
